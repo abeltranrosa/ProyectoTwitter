@@ -28,7 +28,13 @@ public class ClaseTwitter {
         }
     }
 
+    /**
+     * Metodo para twitter muestre los primeros twits
+     *
+     * @throws TwitterExcepcion
+     */
     public void verTimelime(Twitter twitter) {
+
         try {
             List<Status> statuses = twitter.getHomeTimeline();
             System.out.println("Showing home timeline.");
@@ -41,6 +47,11 @@ public class ClaseTwitter {
         }
     }
 
+    /**
+     * Metodo para publicar un Tweet que desees escribir
+     *
+     * @throws TwitterExcepcion
+     */
     public void postearTweet(Twitter twitter) {
 
         try {
@@ -49,7 +60,10 @@ public class ClaseTwitter {
             Logger.getLogger(MiaplicacionTwitter.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-
+/**
+ * metodo buscar que sirve para localizar twits por letas, palabras o del modo que desees
+ * @param twitter 
+ */
     public void buscar(Twitter twitter) {
         try {
             Query query = new Query("#hola mundo");
